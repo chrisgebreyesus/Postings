@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Chris's List{% endblock %}</title>
+</head>
+<body>
+    <h2>Navigation Panel</h2>
+    <div><ul>
+        <li><a href="{% url 'home' %}">Homepage</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'posts' %}">See Postings</a></li>
+    </ul></div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

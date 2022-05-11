@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Current Listings</h1>
+<table>
+    <tr>
+        <td>Post Description</td>
+        <td>Asking Price</td> 
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td><a href="{% url 'post' post.id %}">{{ post.post_description }}</a></td>
+        <td>{{ post.format_asking_price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

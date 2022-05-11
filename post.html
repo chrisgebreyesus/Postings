@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Information about {{ post.post_description }}
+{% endblock %}
+
+{% block content %}
+<h2>See Listing Below</h2>
+    <p>Post Description: {{ post.post_description }}</p>
+    <p>Asking Price: {{ post.format_asking_price}}</p>
+    <p>Date Posted: {{ post.date_posted }}</p>
+    <p>Category: {{ post.category.category_name }}</p>
+    <p>Condition: {{ post.condition.condition_description }}</p>
+    <p>E-mail: {{ post.email }}</p>
+{% endblock %}
